@@ -1,0 +1,7 @@
+FROM node:10
+
+COPY pacakge.json ./
+
+RUN npm isntall
+
+CMD ["node", "server.js"]
