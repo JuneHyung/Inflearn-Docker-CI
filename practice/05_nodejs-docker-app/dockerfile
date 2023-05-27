@@ -1,7 +1,12 @@
 FROM node:10
 
-COPY pacakge.json ./
+WORKDIR /usr/src/app
+
+COPY package*.json ./
 
 RUN npm isntall
 
+COPY ./ ./
+
+EXPOSE 8080
 CMD ["node", "server.js"]
